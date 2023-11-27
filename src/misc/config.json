@@ -1,0 +1,46 @@
+{
+    "config": {
+        "login": {
+            "email": "",
+            "password": "",
+            "did": "",
+            "trading_pin": ""
+        },
+        
+        "api_type": "paper",
+        "auto_cancel_order": true,
+        "frequency": [3, 5],
+        "bto_offset": 0.05,
+        "stc_type": "MKT",
+        "stc_offset": -0.03,
+        "max_per_trade": 750,
+
+        "debug": true,
+        "log_path": "src/misc/app.log",
+        "log_format": "%(asctime)s %(message)s",
+        "csv_path": "src/misc/trades.csv",
+        "variable_path": "src/misc/current_positions.pkl"
+    },
+
+    "tickers": [
+        "SPX",
+        "SPY",
+        "QQQ",
+        "META",
+        "AAPL",
+        "TSLA",
+        "NVDA",
+        "NFLX",
+        "SNOW",
+        "GLD",
+        "IWM",
+        "AMZN",
+        "XOM"
+    ],
+
+    "triggers": {
+        "trim": ["trim"],
+        "exit": ["exit"],
+        "entry": [""]
+    }
+}
