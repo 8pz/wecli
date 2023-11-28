@@ -78,8 +78,7 @@ class Handler:
                             quote = self.wb.get_option_quote(
                                 stock=ticker,
                                 optionId=ticker_id
-                            )['data'][0]
-                            self.logger.debug(f"Quote found: {quote}")
+                            )
 
                         elif ticker and strike_price and direction:
                             quote = self.wb.get_options_by_strike_and_expire_date(
@@ -87,10 +86,7 @@ class Handler:
                                 exp_date,
                                 strike_price, 
                                 direction
-                            )[0][direction]
-                            
-                            self.logger.debug(f"Quote found: {quote}")
-                            ticker_id = quote['tickerId']
+                            )
 
                         else:
                             missing_values = []
@@ -105,6 +101,9 @@ class Handler:
 
                         if not quote:
                             raise error.MissingValueError(f"Quote not found: {ticker}, {strike_price}, {direction}")
+                        quote = quote[0][direction] if isinstance(quote, list) else quote['data'][0] 
+                        self.logger.debug(f"Quote found: {quote}")
+                        ticker_id = quote['tickerId']
                         
                         if not lmt_price:
                             lmt_price = round((float(quote["askList"][0]['price']) + float(quote["bidList"][0]['price'])) / 2, 2)
@@ -123,7 +122,7 @@ class Handler:
             quantity = math.floor(self.max_per_trade / (lmt_price * 100))
 
             if quantity <= 0:
-                raise error.LimitExceededError(f'Cannot use auto quantity. One contract ({lmt_price * 100}) exceeds your limit ({self.max_per_trade})')
+                raise error.LimitExceededError(f'Cannot use auto quantity. One contract ({round(lmt_price * 100, 2)}) exceeds your limit ({self.max_per_trade})')
             
             contract = f'{quantity}x {contract}'
             

@@ -48,7 +48,7 @@ class ConfigLoader:
         
         return True
 
-config_path = "src/misc/config.json"
+config_path = ""
 config = ConfigLoader(config_path)
 wb = None
 with open(config.variable_path, 'rb') as file:

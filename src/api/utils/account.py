@@ -1,8 +1,10 @@
-import getpass, hashlib, os, pickle, requests, time, uuid, urllib.parse
+import getpass, hashlib, os, pickle, requests, time, uuid, urllib.parse, sys
 from datetime import datetime
 from email_validator import validate_email, EmailNotValidError
 
 from . import endpoints
+
+from main import logger
 
 class account:
     def __init__(self, paper=False, **kwargs):
@@ -102,6 +104,10 @@ class account:
             self._account_id = self.get_account_id()
             if save_token:
                 self._save_token(result, token_path)
+            return logger.info('Webull successfully logged in')
+        logger.info('Webull failed to log in')
+        input()
+        sys.exit()
 
     def _get_did(self, path=''):
         '''
