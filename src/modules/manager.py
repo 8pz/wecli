@@ -1,7 +1,7 @@
 import traceback, pickle, asyncio
 
 import main
-from . import utils as error
+from . import error
 
 class Manager:
 

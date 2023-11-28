@@ -2,7 +2,7 @@ import re, traceback, math
 from datetime import datetime
 
 import main
-from . import utils as error
+from . import error
 from .manager import Manager
 
 manager = Manager()
