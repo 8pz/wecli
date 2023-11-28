@@ -51,7 +51,7 @@ class paper_webull(u):
         if response.status_code != 200:
             raise Exception('place_option_order failed', response.status_code, response.reason)
         
-        logger.info(f'{orderType} {action} order sent: {contract}')
+        logger.info(f'{orderType} {action} order sent: {contract} @ ~{lmtPrice}')
         response = response.json()
 
         if config.auto_cancel_order is True and tp_order is False:

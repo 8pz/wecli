@@ -9,6 +9,8 @@ from .utils import utils as u
 endpoint = urls()
 utils = u()
 
+from main import logger
+
 class webull(u):
     def __init__(self, **kwargs) -> None:
         self.wb = account(**kwargs)
@@ -266,7 +268,7 @@ class webull(u):
         if response.status_code != 200 :
             raise Exception('place_option_order failed', response.status_code, response.reason)
         
-        self.wb.logger.info(f'{orderType} {action} order sent: {contract}')
+        logger.info(f'{orderType} {action} order sent: {contract} @ ~{lmtPrice}')
         
         if stpPrice:
             data_stp = {
@@ -279,7 +281,7 @@ class webull(u):
             response_stop = requests.post(endpoint.place_option_orders(self.wb._account_id), json=data, headers=headers, timeout=self.wb.timeout)
             if response_stop.status_code != 200:
                 raise Exception('place_option_order (stop loss order) failed', response_stop.status_code, response_stop.reason)
-            self.wb.logger.info(f'STOP order sent @ {stpPrice}')
+            logger.info(f'STOP order sent @ {stpPrice} @ ~{lmtPrice}')
 
         return response.json(), response_stop.json()
 

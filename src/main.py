@@ -48,7 +48,7 @@ class ConfigLoader:
         
         return True
 
-config_path = ""
+config_path = "D:\Downloads\Coding\Python\cli-hidden-config\config.json"
 config = ConfigLoader(config_path)
 wb = None
 with open(config.variable_path, 'rb') as file:

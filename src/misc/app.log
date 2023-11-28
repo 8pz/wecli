@@ -1,0 +1,12 @@
+11-27 18:55:13 Webull successfully logged in
+11-27 18:55:21 Ticker found: SPX
+11-27 18:55:21 Strike and direction found: 4545, call
+11-27 18:55:24 Quote found: {'open': '11.57', 'high': '15.78', 'low': '4.20', 'strikePrice': '4545', 'isStdSettle': 1, 'preClose': '5.50', 'openInterest': 505, 'volume': '10258', 'latestPriceVol': '1', 'delta': '0.0000', 'vega': '0.0000', 'impVol': '2.2542', 'gamma': '0.0000', 'theta': '0.0000', 'rho': '0.0000', 'close': '5.50', 'change': '-12.58', 'changeRatio': '-0.6958', 'expireDate': '2023-11-27', 'tickerId': 1042300318, 'belongTickerId': 913354362, 'openIntChange': 103, 'activeLevel': 50, 'cycle': 2, 'weekly': 1, 'executionType': 'E', 'direction': 'call', 'derivativeStatus': 0, 'currencyId': 247, 'regionId': 6, 'exchangeId': 189, 'exchangeCode': 'OPRA', 'disExchangeCode': 'OPRA', 'symbol': 'SPXW231127C04545000', 'unSymbol': 'SPXW', 'settlementTickerId': 913354362, 'expirationType': 2, 'askList': [{'price': '6.10', 'volume': '15', 'quoteEx': 'XCBO'}], 'bidList': [{'price': '5.30', 'volume': '1', 'quoteEx': 'XCBO'}], 'quoteMultiplier': 100, 'quoteLotSize': 100}
+11-27 18:55:25 LMT BUY order sent: 1x SPX 11/27 4545c
+11-27 18:55:43 Order failed: Cancelling order 129016063 as it was not filled.
+11-27 18:56:40 Webull successfully logged in
+11-27 18:56:47 Ticker found: SPX
+11-27 18:56:47 Strike and direction found: 4545, call
+11-27 18:56:50 Quote found: {'open': '11.57', 'high': '15.78', 'low': '4.20', 'strikePrice': '4545', 'isStdSettle': 1, 'preClose': '5.50', 'openInterest': 505, 'volume': '10258', 'latestPriceVol': '1', 'delta': '0.0000', 'vega': '0.0000', 'impVol': '2.2552', 'gamma': '0.0000', 'theta': '0.0000', 'rho': '0.0000', 'close': '5.50', 'change': '-12.58', 'changeRatio': '-0.6958', 'expireDate': '2023-11-27', 'tickerId': 1042300318, 'belongTickerId': 913354362, 'openIntChange': 103, 'activeLevel': 50, 'cycle': 2, 'weekly': 1, 'executionType': 'E', 'direction': 'call', 'derivativeStatus': 0, 'currencyId': 247, 'regionId': 6, 'exchangeId': 189, 'exchangeCode': 'OPRA', 'disExchangeCode': 'OPRA', 'symbol': 'SPXW231127C04545000', 'unSymbol': 'SPXW', 'settlementTickerId': 913354362, 'expirationType': 2, 'askList': [{'price': '6.10', 'volume': '15', 'quoteEx': 'XCBO'}], 'bidList': [{'price': '5.30', 'volume': '1', 'quoteEx': 'XCBO'}], 'quoteMultiplier': 100, 'quoteLotSize': 100}
+11-27 18:56:50 LMT BUY order sent: 1x SPX 11/27 4545c @ ~5.7
+11-27 18:57:08 Order failed: Cancelling order 129016072 as it was not filled.
