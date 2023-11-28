@@ -16,7 +16,7 @@ Webull options chain is too hard to use? Following analysts is too slow? Try WeC
 ![image](https://github.com/8pz/wecli/assets/70970973/afc862d3-6d9e-447c-8ac5-ca82122a697b)
 
 
-This project is a submodule of [Ren Options Trader](https://github.com/8pz/ren-options-trader/) -- an automated webull options trader that can follow any analyst's entries and exits on Discord.
+This project is an extension of [Ren Options Trader](https://github.com/8pz/ren-options-trader/) -- an private automated webull options trader that can follow any analyst's entries and exits on Discord.
 
 # Table of Contents
 
