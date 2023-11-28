@@ -13,7 +13,8 @@ python cli to execute options trades
 
 Webull options chain is too hard to use? Following analysts is too slow? Try WeCli instead -- A python program that interprets messages, finds option details, and execute trades off those details. Highly configurable to your own needs.
 
-![image](https://github.com/8pz/wecli/assets/70970973/bf871e33-997c-45dd-9a19-e7a86e3b9795)
+![image](https://github.com/8pz/wecli/assets/70970973/afc862d3-6d9e-447c-8ac5-ca82122a697b)
+
 
 This project is a submodule of [Ren Options Trader](https://github.com/8pz/ren-options-trader/) -- an automated webull options trader that can follow any analyst's entries and exits on Discord.
 
